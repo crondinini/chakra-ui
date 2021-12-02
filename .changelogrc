@@ -1,23 +1,85 @@
-## 17-11-2021
+## 02-12-2021
 
-**Props Docs** `v1.0.40`
+`@chakra-ui/react@1.7.3`
 
-- Fix issue where package doesn't include a `dist` folder and doesn't work when
-  installed from npm.
+- Update storybook url configuration for `@chakra-ui/react` to
+  [https://storybook.chakra-ui.com](https://storybook.chakra-ui.com)
 
-**Radio** `v1.4.2`
+**Layout** `v1.6.0`
 
-- Add cursor `pointer` to the radio container
+- Add support for style props `gap`, `columnGap` and `rowGap`. Those CSS
+  properties are valid in a grid or flex context. For further information see
+  https://developer.mozilla.org/en-US/docs/Web/CSS/gap.
+- Fix TS issue with Grid component due to the native `gap`, `rowGap` and
+  `columnGap` we added to styled system.
 
-**Slider** `v1.5.2`
+**Styled System** `v1.15.0`
 
-- Fixed a bug where a thumb would not move in case of stacked thumbs
+- Add support for style props `gap`, `columnGap` and `rowGap`. Those CSS
+  properties are valid in a grid or flex context. For further information see
+  https://developer.mozilla.org/en-US/docs/Web/CSS/gap.
+- fix gradient parser when a position is specified
+- Fix issue where tokens autocomplete don't show up anymore except user runs the
+  cli command.
 
-**Color Mode** `v1.3.2`
+**Menu** `v1.8.2`
 
-- Fixed flaky color-mode test
-- Fixed issue where `DarkMode` and `LightMode` elements rerenders their children
-  even if the child is memoized.
+- Fix issue where `enabled` TS type was exposed to popover and menu from
+  `UsePopperProps`. This was resolved by omitting `enabled` from the type
 
-`<LightMode>` and `<DarkMode>` components are now memoized to prevent
-unnecessary rendering of their child components.
+**Popover** `v1.11.0`
+
+- Fix issue where `enabled` TS type was exposed to popover and menu from
+  `UsePopperProps`. This was resolved by omitting `enabled` from the type
+- Add `PopoverAnchor` component which allows you to set the `Popover` reference
+  point without acting as a trigger.
+
+**Theme** `v1.12.2`
+
+- Fix issue where tokens autocomplete don't show up anymore except user runs the
+  cli command.
+
+**Toast** `v1.5.0`
+
+- The `toast` function now exposes a `containerStyle` property you can use to
+  override the default styles for the toast container.
+
+```jsx live=false
+function Example() {
+  // Via instantiation
+  const toast = useToast({
+    position: 'top',
+    title: 'Container style is customizable',
+    containerStyle: {
+      maxWidth: '100%',
+    },
+  });
+
+  // Or via trigger
+  return (
+    <Button
+      onClick={() => {
+        toast({
+          containerStyle: {
+            maxWidth: '100%',
+          },
+        });
+      }}
+    >
+      Click me to show toast with custom container style.
+    </Button>
+  );
+}
+```
+
+**Tooltip** `v1.4.2`
+
+- Prevent `onKeyDown` callback from de/registering on every call of `useTooltip`
+
+**Media Query** `v1.2.2`
+
+- Corrected and optimized useMediaQuery hook.
+
+**Icon** `v2.0.0`
+
+- Auto assign key when passing array of paths to `createIcon`
