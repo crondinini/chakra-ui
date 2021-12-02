@@ -1,5 +1,27 @@
 # Change Log
 
+## 1.15.0
+
+### Minor Changes
+
+- [#5123](https://github.com/chakra-ui/chakra-ui/pull/5123)
+  [`26d2a547b`](https://github.com/chakra-ui/chakra-ui/commit/26d2a547bca20e197f352c7492e3cad197b513e6)
+  Thanks [@TimKolberger](https://github.com/TimKolberger)! - Add support for
+  style props `gap`, `columnGap` and `rowGap`. Those CSS properties are valid in
+  a grid or flex context. For further information see
+  https://developer.mozilla.org/en-US/docs/Web/CSS/gap.
+
+### Patch Changes
+
+- [#4970](https://github.com/chakra-ui/chakra-ui/pull/4970)
+  [`73235af10`](https://github.com/chakra-ui/chakra-ui/commit/73235af10d8868786ec58778dda9a42b8d275599)
+  Thanks [@giuseppelt](https://github.com/giuseppelt)! - fix gradient parser
+  when a position is specified
+
+* [`f15099adc`](https://github.com/chakra-ui/chakra-ui/commit/f15099adc60150781607288dbe12133c2fb84e38)
+  Thanks [@segunadebayo](https://github.com/segunadebayo)! - Fix issue where
+  tokens autocomplete don't show up anymore except user runs the cli command.
+
 ## 1.14.1
 
 ### Patch Changes
